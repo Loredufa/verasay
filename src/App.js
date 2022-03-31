@@ -1,25 +1,38 @@
-import logo from './logo.svg';
 import './App.css';
+import {BrowserRouter, Route, Routes} from 'react-router-dom';
+import { LandingPage } from './components/LandingPage';
+import {Home} from './components/Home';
+import {Porfolio} from './components/Porfolio';
 
 function App() {
   return (
+    <BrowserRouter>
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <Routes>
+      <Route path= "/" element={<LandingPage/>}/>
+      <Route path= "/Home" element={<Home/>}/>
+      <Route path= "/Porfolio" element={<Porfolio/>}/>
+
+    </Routes>
     </div>
+    </BrowserRouter>
   );
 }
 
 export default App;
+//Client ID
+//665304440149-s5sngsia1svjnu5atgc4542soi9ks6ec.apps.googleusercontent.com
+
+//Client Secret
+//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
+
+//cliente de OAuth
+//Client ID
+//665304440149-h5dp1dld11qirujnnrg33rcc0kpadrq4.apps.googleusercontent.com
+//Client Secret
+//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
+
+//API key
+//AIzaSyDxz6aZaZsT8CXaipY9d0XPzTLiJ0DWYSk
+
+// npm i axios
