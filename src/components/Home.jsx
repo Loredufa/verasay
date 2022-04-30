@@ -1,20 +1,25 @@
-import React from "react";
+import React, { useEffect } from "react";
 import NavBar from "./NavBar";
+import { LandingPage } from "./LandingPage";
 import styled from "styled-components";
-import img from '../assets/flower.jpg';
+// import Files from "./Files";
+import Aos from "aos";
+import 'aos/dist/aos.css';
+
 
 export function Home () {
+  useEffect (() => {
+    Aos.init({duration:2000});
+  }, [])
 
     return (
         <ContGrl>
         <NavBar/>  
-        <ContH>
-        <ImgH src={require("../assets/01.jpg")} alt="img not found" />
-        <ImgH src={require("../assets/07.jpg")} alt="img not found" />
-        <ImgH src={require("../assets/08.jpg")} alt="img not found" />
-        </ContH>   
+        <Pesent>
+       <LandingPage/>
+       </Pesent>
         <ContBby>
-          <DivText>
+          <DivText data-aos="fade-right">
             <h3>Sessions Experience</h3>
             <p>90 Minutes <br/> All the Digitals <br/> 9x6 Heirloom Album - 10 Spreads <br/>* This is my standard session used for all stages of your family. Newborns included. *<br/>
                Sessions are built around capturing your family doing something you love. We can garden, play games, ride bikes or bake a favorite family recipe.<br/>
@@ -23,15 +28,15 @@ export function Home () {
                your baby a sink bath can hold meaning years down the road.<br/>
                Ideal for: everyone</p>
           </DivText>  
-          <DivImg>
+          <DivImg data-aos="fade-left">
         <img src={require("../assets/02.jpg")} alt="img not found" />
           </DivImg>  
         </ContBby> 
         <ContBby>
-          <DivImgLeft>
+          <DivImgLeft data-aos="fade-right">
         <img src={require("../assets/Short1.jpg")} alt="img not found" />
           </DivImgLeft>  
-          <DivText>
+          <DivText data-aos="fade-left">
             <h3>Short Sessions</h3>
             <p>We focus on what matters most in these chaotic and changing times. <br/>
                We spend time in the outdoor spaces that have meaning to you. 
@@ -44,48 +49,39 @@ export function Home () {
     )
 }
 const ContGrl = styled.div`
-background-image: url(${img});
-background-position: center center;
-background-repeat: no-repeat;
-background-size: cover;
-background-attachment:fixed;
-height:150%;
-width:100%;
-z-index: -100;
-`;
-const ContH = styled.div`
 display: inline;
-width:100vw;
-background:transparent;
 `;
-const ImgH = styled.img`
-width: 400px;
-height: 400px;
-margin-top:5%;
-box-shadow: 5px 5px 10px rgb(54, 54, 54);
+const Pesent = styled.div`
+
+display: block;
+
+
 `;
+
 const ContBby = styled.div`
 display: flex;
-width:100vw;
+width:94vw;
 background:transparent;
-width:100%;
-margin-top:10%;
+margin-left: 3%;
+margin-top:5%;
+
 `;
 const DivText = styled.div`
 margin-right:5%;
 margin-left:5%;
 text-align:left;
 & h3 {
+color:#818181;
 font-size: 30px;
-text-shadow: 2px 2px 10px #2e2e2d;
+text-shadow: 2px 2px 10px #979797;
 }
 & p {
     font-size: 20px;
     font-weight: normal;
+    color: #313131;
 }
 `;
 const DivImg = styled.div`
-margin-right:5%;
 box-shadow: 5px 5px 10px rgb(54, 54, 54);
 & img {
     height: 100%;

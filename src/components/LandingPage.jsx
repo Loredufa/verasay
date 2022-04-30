@@ -1,19 +1,23 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { Link } from "react-router-dom";
 import styled from 'styled-components';
+import Aos from "aos";
+import 'aos/dist/aos.css';
 
 export function LandingPage () {
-
+    useEffect (() => {
+        Aos.init({duration:2000});
+      }, [])
     return (
         <Contenedor>
-        <ContImgL >
-            <ImgL src={require("../assets/L1.jpg")} alt="img not found" />
+        <ContImgL data-aos="fade-left">
+        <div>
+          <h1>Hi! </h1>
+          <h3>I'm</h3>
+          </div>
         </ContImgL>
-
-        <ContdivL>
-        <TitleL>Veronica Say</TitleL>
-        <PL>Photography</PL>
-        <Link to = '/Home'><BtL>Intro</BtL></Link>
+        <ContdivL data-aos="fade-right"  data-aos-offset="300"  data-aos-easing="ease-in-sine">
+        <ImgL src={require("../assets/04.jpg")} alt="img not found"/>
         </ContdivL>
         </Contenedor>
     )
@@ -21,35 +25,38 @@ export function LandingPage () {
 
 
 const Contenedor = styled.div`
-display: flex;
+
 `;
 const ContImgL = styled.div`
-width:80%
+font-family:'Poppins';
+
+h1 {
+    color: #e0dedf;
+    font-size: 4.5rem;
+}
+}
+
+
 `;
 const ImgL = styled.img`
-height:100vh;
+
 width:100vw;
+box-shadow: 5px 5px 10px rgb(54, 54, 54);
 `;
+
 
 const ContdivL = styled.div`
-position: absolute;
-top:20%;
-left:10%;
+
 
 `;
-const TitleL= styled.h1`
-font-size:70px;
+
+const TitleL= styled.h2`
+font-size:40px;
 padding-bottom:0px;
 margin-bottom:0px;
-font-family:'Shadows Into Light', cursive;
+font-family:'Poppins';
 color: #432371;
-text-shadow: 5px 5px 10px #2e2e2d;
-`;
-const PL = styled.p`
-font-size:30px;
-padding-top:0px;
-margin-top:10px;
-
+text-shadow: 5px 5px 10px #4d4d21;
 `;
 
 const BtL = styled.button`
@@ -58,13 +65,12 @@ margin-left: 15px;
 cursor: pointer;
 font-size: 1rem;
 padding: 6px 20px;
-border: 2px solid #432371;
+border: none;
 border-radius: 50px;
-box-shadow: 5px 5px 10px rgb(54, 54, 54);
+color: #868686;
 transition: background-color .6s ease;
 &:hover {
-    color: #9b9b9b;
-    background-color:#432371;  
+    color: #432371;
 }
 `;
 
