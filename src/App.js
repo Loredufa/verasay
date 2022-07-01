@@ -2,7 +2,9 @@ import './App.css';
 import {BrowserRouter, Route, Routes} from 'react-router-dom';
 import { LandingPage } from './components/LandingPage';
 import {Home} from './components/Home';
+import {Home2} from './components/Home2';
 import {Porfolio} from './components/Porfolio';
+import {Porfolio2} from './components/Porfolio2';
 
 function App() {
   return (
@@ -10,8 +12,8 @@ function App() {
     <div className="App">
     <Routes>
       {/* <Route path= "/" element={<LandingPage/>}/> */}
-      <Route path= "/" element={<Home/>}/>
-      <Route path= "/Porfolio" element={<Porfolio/>}/>
+      <Route path= "/" element={<Home2/>}/>
+      <Route path= "/Porfolio" element={<Porfolio2/>}/>
 
     </Routes>
     </div>

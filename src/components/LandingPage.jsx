@@ -11,10 +11,6 @@ export function LandingPage () {
     return (
         <Contenedor>
         <ContImgL data-aos="fade-left">
-        <div>
-          <h1>Hi! </h1>
-          <h3>I'm</h3>
-          </div>
         </ContImgL>
         <ContdivL data-aos="fade-right"  data-aos-offset="300"  data-aos-easing="ease-in-sine">
         <ImgL src={require("../assets/04.jpg")} alt="img not found"/>
@@ -25,22 +21,22 @@ export function LandingPage () {
 
 
 const Contenedor = styled.div`
-
+margin-top: 6%;
 `;
 const ContImgL = styled.div`
 font-family:'Poppins';
 
 h1 {
-    color: #e0dedf;
-    font-size: 4.5rem;
+    color: #727A9A;
+    
+    font-size: 1.5rem;
+    
 }
-}
-
-
 `;
 const ImgL = styled.img`
 
 width:100vw;
+
 box-shadow: 5px 5px 10px rgb(54, 54, 54);
 `;
 

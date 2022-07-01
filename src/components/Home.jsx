@@ -2,7 +2,6 @@ import React, { useEffect } from "react";
 import NavBar from "./NavBar";
 import { LandingPage } from "./LandingPage";
 import styled from "styled-components";
-// import Files from "./Files";
 import Aos from "aos";
 import 'aos/dist/aos.css';
 
@@ -14,10 +13,6 @@ export function Home () {
 
     return (
         <ContGrl>
-        <NavBar/>  
-        <Pesent>
-       <LandingPage/>
-       </Pesent>
         <ContBby>
           <DivText data-aos="fade-right">
             <h3>Sessions Experience</h3>

@@ -46,7 +46,7 @@ min-height: 100vh;
 width: 80px;
 background-color: whitesmoke;
 	div {
-	transform: rotate(90deg);
+
     width: 10vh;
 	height:100%;
 	font-size:30px;

@@ -11,7 +11,7 @@ export default function NavBarH () {
 			<p>Veronica Say</p>
 		</div>
 		<div>
-			<i class="fa fa-hdd-o"><Link to='/Home'><img class="img" src={require("../assets/casa.png")} alt="img not found" width="30px" height="35px"/></Link></i>
+			<i class="fa fa-hdd-o"><Link to='/'><img class="img" src={require("../assets/casa.png")} alt="img not found" width="30px" height="35px"/></Link></i>
 			<span class="tooltip">Home</span>
 		</div>
 		<div>
@@ -34,6 +34,7 @@ height:10%;
 width: 100vw;
 background-color: whitesmoke;
 opacity: 0.9;
+z-index:999;
 
 
 	div {
