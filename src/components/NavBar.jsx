@@ -33,7 +33,7 @@ display:flex;
 height:10%;
 width: 100vw;
 background-color: whitesmoke;
-opacity: 0.9;
+opacity: 0.7;
 z-index:999;
 
 
