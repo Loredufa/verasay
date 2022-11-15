@@ -1,6 +1,4 @@
 import React, { useEffect } from "react";
-import NavBar from "./NavBar";
-import { LandingPage } from "./LandingPage";
 import styled from "styled-components";
 import Aos from "aos";
 import 'aos/dist/aos.css';

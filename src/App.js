@@ -1,8 +1,6 @@
 import './App.css';
 import {BrowserRouter, Route, Routes} from 'react-router-dom';
-
 import {Home2} from './components/Home2';
-import {Porfolio} from './components/Porfolio';
 import {Porfolio2} from './components/Porfolio2';
 
 function App() {

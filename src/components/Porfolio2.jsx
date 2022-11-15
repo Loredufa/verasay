@@ -1,6 +1,6 @@
 import React from "react";
-import Photos from "./Photos";
 import NavBar from "./NavBar";
+import { Gallery } from "./Gallery";
 
 
 export function Porfolio2() {
@@ -9,7 +9,7 @@ export function Porfolio2() {
       <>
       <NavBar/>
       <div>
-      <Photos/>
+      <Gallery/>
       </div>
       </>
   );
