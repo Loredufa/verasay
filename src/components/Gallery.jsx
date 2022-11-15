@@ -51,4 +51,5 @@ export function Gallery () {
 const Photo = styled.img`
 width: 100%;
 overflow: hidden;
+image-rendering: auto;
 `;
