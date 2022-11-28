@@ -1,16 +1,16 @@
 
 const initialState = {
-    albums : [],
+    isLoading : false,
     googlePhotos : []
 }
 
 function rootReducer( state= initialState, action) {
 switch (action.type) {
 
- case 'GET_ALBUMS':
+ case 'LOADER':
      return {
          ...state,
-         albums: action.payload,
+         isLoading: action.payload,
      }
  case 'GET_GOOGLE_PHOTOS':
     return {

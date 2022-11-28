@@ -4,19 +4,20 @@ import './Photos.css';
 import CloseIcon from '@material-ui/icons/Close';
 import { setGooglePhotos } from '../actions';
 import styled from "styled-components";
+import { Loading }from './Loading';
 
 export function Gallery () {
 
     const dispatch = useDispatch()
 
     const googlePhotos = useSelector ((state) => state.googlePhotos)
-
-  let photos  = googlePhotos.map((el, index) => {
-      return {id: index += 1,  imgSrc: el}
+  
+  
+    let photos  = googlePhotos.map((el, index) => {
+      return {id: index += 1,  imgSrc: el + '=w420'}
       
     })
-    console.log(photos)
-       
+    
   const [model, setModel] = useState(false);
   const [tempImgSrc, setTempImgSrc] = useState('');
   const getImg = (imgSrc) => {
@@ -25,9 +26,9 @@ export function Gallery () {
   }
 
   useEffect(() => {
-    dispatch(setGooglePhotos());
+    dispatch (setGooglePhotos());
     }, [dispatch])
-
+  
    return (
      <>
      <div className={model? "model open" : "model"}>
@@ -41,9 +42,8 @@ export function Gallery () {
              <Photo src={item.imgSrc} alt='imge not found' />
            </div>
          )
-       })}
-
-     </div>
+              })}
+    </div>
      </>
    )
 }
@@ -51,5 +51,4 @@ export function Gallery () {
 const Photo = styled.img`
 width: 100%;
 overflow: hidden;
-image-rendering: auto;
 `;

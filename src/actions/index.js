@@ -2,9 +2,9 @@ import axios from "axios";
 
 
 
-export const setAlbums = (payload) => ({
-    type : 'GET_ALBUMS',
-    payload 
+export const setLoader = (loading) => ({
+    type : 'LOADER',
+    payload : loading
 })
 
 export function setGooglePhotos() {
