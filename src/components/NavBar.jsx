@@ -19,7 +19,7 @@ export default function NavBarH () {
 			<span class="tooltip">Porfolio</span>
 		</div>
         <div>
-        <a href="https://www.instagram.com/veronicasay_fotos/"> <ImgH src={require("../assets/instagram.png")} alt="img not found" /> </a>
+        <a href="https://www.instagram.com/veronicasay_fotos/"> <ImgH src={require("../assets/instagram.png")} alt="img not found"/> </a>
         </div>  	
 </Sidebarnavigation>
     )
@@ -104,14 +104,49 @@ z-index:999;
 				}
 			}			
 		}
+	
+		
+@media screen and (max-width: 1200px) { 
+	height:7%;
+	div {
+    width: 10vh;
+	height:100%;
+	font-size:20px;
+	padding-right:2px;
+	margin-right:10%;
+
+}
+}
+@media screen and (max-width: 900px) { 
+	height:5%;
+	div {
+    width: 10vh;
+	height:100%;
+	font-size:15px;
+	padding-right:2px;
+	margin-right:10%;
+
+}
+}
+@media screen and (max-width: 480px) {
+	height:2%;
+	div {
+    width: 10vh;
+	height:100%;
+	font-size:15px;
+	padding-right:1px;
+	margin-right:15%;
+}
+}
 `;
 
 const ImgH = styled.img`
-width: 25px;
-height: 25px;
+width: 30px;
+height: 30px;
 position: relative;
 right:-40%;
 margin-right:5%;
+margin-top:10%;
 justify-content:left;
 filter: invert(60%) sepia(0%) saturate(2128%) hue-rotate(88deg) brightness(107%) contrast(76%);
 &:hover {

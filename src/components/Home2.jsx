@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React, {useState, useEffect} from "react";
 import { ParallaxProvider} from 'react-scroll-parallax';
 import NavBar from "./NavBar";
 import { Home } from "./Home";
@@ -8,8 +8,10 @@ import styled from "styled-components";
 
 
 
+
 export function Home2 () {
     return (
+        
       <ParallaxProvider>
           <NavBar/>
        <ParallaxImg imgsrc={img1} height='500px' opacity='.5'>

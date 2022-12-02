@@ -6,14 +6,14 @@ const ParallaxImg = (props) => {
         display:'fex',
         justifyContent:'center',
         alignItems:'center',
-        height:'50%',
+        height:'100%',
         color:'ffffff',
         backgroundColor:'whitesmoke',
         webkitFilter:'blur(0px) satutate(2)'
     }
 return (
 <ParallaxBanner 
-layers={[{image: props.imgsrc , speed: -50}]}
+layers={[{image: props.imgsrc , speed: -20}]}
 style={{height: props.height}}
 >
     <div style={contentStyle}>
